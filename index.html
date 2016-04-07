@@ -10,488 +10,177 @@
 
 <body>
     <!--<div id="maket"></div>-->
-    
-    <section class="sec_opr">
+    <section class="block">
         <div class="wrap">
-            <div class="yan_dir">
-                <h2>Вы уже пользовались Яндекс Директ?</h2>
-                <div class="btna_gr">
-                    <a href="">ДА</a>
-                    <a href="">НЕТ</a>
-                </div>
-                <a href="" class="bak">На шаг назад</a>
+            <header>
+                <div class="logo"></div>
+                <p class="opros">Краткий опрос
+                    <br><span>1 шаг из 8</span></p>
+            </header>
+            <div id="opros-wrap">
+                <section class="sec active" data-step="1">
+                    <h2>Мы знаем что вы размещали объявление в Яндекс.Директ.<br>На сколько вы довольны результатом?</h2>
+                    <div class="btn_gr">
+                        <a class="otvet" href="" data-otvet="1" data-nextstep="2">Доволен на 100%</a>
+                        <a class="otvet" href="" data-otvet="2" data-nextstep="2">Могло быть и лучше</a>
+                        <a class="otvet" href="" data-otvet="3" data-nextstep="2">Не доволен, слил бюджет</a>
+                        <a class="otvet" href="" data-otvet="4" data-nextstep="2">Яндекс.Директ не работает</a>
+                    </div>
+                    <a href="" class="back">НАЗАД</a>
+                </section>
+                <section class="sec" id="o1" data-otvet="1" data-step="2">
+                    <h2>Мы очень рады за Вас, тем не менее, хотите ли вы<br> улучшить показатели?</h2>
+                    <div class="btn_gr mid">
+                        <a class="var" href="" data-var="1" data-nextstep="3">Нет, меня все устравиает</a>
+                        <a class="var" href="" data-var="2" data-nextstep="3">Безусловно</a>
+                    </div>
+                    <a href="" class="back" data-prevstep="1">НАЗАД</a>
+                </section>                
+                <section class="sec" id="o1_o2" data-otvet="1" data-step="3" data-var="1">
+                    <h2>Хорошо, тогда ознакомьтесь с нашим<br> предложением, возможно оно вас заинтересует.</h2>
+                    <div class="btn_gr mid">
+                        <a href="">скчать, ссылка на сайт</a>
+                    </div>
+                    <a href="" class="back" data-prevstep="2">НАЗАД</a>
+                </section>
+                <section class="sec" id="o1_o1" data-otvet="1" data-step="3" data-var="2">
+                    <h2>В данный момент реклама запущена?</h2>
+                    <div class="btn_gr">
+                        <a href="" data-nextstep="4">Да</a>
+                        <a href="" data-nextstep="4">Нет</a>
+                    </div>
+                    <a href="" class="back" data-prevstep="2">НАЗАД</a>
+                </section>
+                <section class="sec" id="o1_o1_o2" data-otvet="1" data-step="4">
+                    <h2>Какой в среднем бюджет вы тратили в месяц?</h2>
+                    <div class="btn_gr">
+                        <a href="">До 100 тыс. руб.</a>
+                        <a href="">От 100 до 300 тыс. руб.</a>
+                        <a href="">От 300 тыс. до 1 млн. руб.</a>
+                        <a href="">От 1 млн. руб.</a>
+                    </div>
+                    <a href="" class="back">НАЗАД</a>
+                </section>
+                <section class="sec" id="o2" data-otvet="2" data-step="2">
+                    <h2>Что конкретно вас не устраивает?</h2>
+                    <div class="btn_gr">
+                        <a href="" data-nextstep="3">Мало заявок</a>
+                        <a href="" data-nextstep="3">Заявки не целевые</a>
+                        <a href="" data-nextstep="3">Дорогие заявки</a>
+                        <a href="" data-nextstep="3">Медленные директологи</a>
+                    </div>
+                    <a href="" class="back" data-prevstep="1">НАЗАД</a>
+                </section>
+                <section class="sec" id="o2_o1" data-otvet="2" data-step="3">
+                    <h2>В данный момент реклама запущена?</h2>
+                    <div class="btn_gr">
+                        <a class="var" href="" data-nextstep="4" data-var="1">Да</a>
+                        <a class="var" href="" data-nextstep="4" data-var="2">Нет</a>
+                    </div>
+                    <a href="" class="back" data-prevstep="2">НАЗАД</a>
+                </section>
+                <section class="sec" id="o2_o1_o1" data-otvet="2" data-step="4" data-var="1">
+                    <h2>Какой в среднем бюджет вы тратите в месяц?</h2>
+                    <div class="btn_gr">
+                        <a href="">До 100 тыс. руб.</a>
+                        <a href="">От 100 до 300 тыс. руб.</a>
+                        <a href="">От 300 тыс. до 1 млн. руб.</a>
+                        <a href="">От 1 млн. руб.</a>
+                    </div>
+                    <a href="" class="back" data-prevstep="3">НАЗАД</a>
+                </section>
+                <section class="sec" id="o2_o2_o1" data-otvet="2" data-step="4" data-var="2">
+                    <h2>Какой в среднем бюджет вы тратили в месяц?</h2>
+                    <div class="btn_gr">
+                        <a href="">До 100 тыс. руб.</a>
+                        <a href="">От 100 до 300 тыс. руб.</a>
+                        <a href="">От 300 тыс. до 1 млн. руб.</a>
+                        <a href="">От 1 млн. руб.</a>
+                    </div>
+                    <a href="" class="back">НАЗАД</a>
+                </section>                    
+                <section class="sec" id="o3" data-otvet="3" data-step="2">
+                    <h2>Что конкретно вас не устраивает?</h2>
+                    <div class="btn_gr">
+                        <a href="">Мало заявок</a>
+                        <a href="">Заявки не целевые</a>
+                        <a href="">Дорогие заявки</a>
+                    </div>
+                    <a href="" class="back" data-prevstep="1">НАЗАД</a>
+                </section>
+                <section class="sec" id="o3_o1" data-otvet="3" data-step="3">
+                    <h2>В данный момент реклама запущена?</h2>
+                    <div class="btn_gr">
+                        <a href="">Да</a>
+                        <a href="">Нет</a>
+                    </div>
+                    <a href="" class="back">НАЗАД</a>
+                </section>
+                <section class="sec" id="o3_o1_o1" data-otvet="3" data-step="4" data-var="1">
+                    <h2>Какой в среднем бюджет вы тратите в месяц?</h2>
+                    <div class="btn_gr">
+                        <a href="">До 100 тыс. руб.</a>
+                        <a href="">От 100 до 300 тыс. руб.</a>
+                        <a href="">От 300 тыс. до 1 млн. руб.</a>
+                        <a href="">От 1 млн. руб.</a>
+                    </div>
+                    <a href="" class="back">НАЗАД</a>
+                </section>
+                <section class="sec" id="o3_o2_o1" data-otvet="3" data-step="4" data-var="2">
+                    <h2>Какой в среднем бюджет вы тратили в месяц?</h2>
+                    <div class="btn_gr">
+                        <a href="">До 100 тыс. руб.</a>
+                        <a href="">От 100 до 300 тыс. руб.</a>
+                        <a href="">От 300 тыс. до 1 млн. руб.</a>
+                        <a href="">От 1 млн. руб.</a>
+                    </div>
+                    <a href="" class="back">НАЗАД</a>
+                </section>
+
+
+                <section class="sec" id="o4" data-otvet="4" data-step="2">
+                    <h2>Сколько денег вы потратили в молоко?</h2>
+                    <div class="btn_gr">
+                        <a href="">До 100 тыс. руб.</a>
+                        <a href="">От 100 до 300 тыс. руб.</a>
+                        <a href="">От 300 тыс. до 1 млн. руб.</a>
+                    </div>
+                    <a href="" class="back" data-prevstep="1">НАЗАД</a>
+                </section>
+                    
+                <section class="sec" id="o4_o1" data-otvet="4" data-step="3">
+                    <h2>К сожалению не всем везет с подрядчиками, зачастую попадаются исполнители, которые не обладают достаточным объемом знаний, готовы ли вы поработать и исполнителем, который делает реальный результат?</h2>
+                    <div class="btn_gr mid">
+                        <a href="">Можно попробовать</a>
+                        <a href="">Никому не доверяю</a>
+                    </div>
+                    <a href="" class="back">НАЗАД</a>
+                </section>
+                <section class="sec" id="o4_o1_o2" data-otvet="4" data-step="4">
+                    <h2>Хорошо, тогда ознакомьтесь с нашим предложением, возможно оно вас заинтересует</h2>
+                    <div class="btn_gr mid">
+                        <a href="">Скчать</a>
+                    </div>
+                    <a href="" class="back">НАЗАД</a>
+                </section>                
+                <section class="sec" id="o1_o1_o12_o" data-step="5">
+                    <h2>95% рекламодателей допускают десятки ошибок в Яндекс Директ, мы знаем это, так как только за последние 2 года обучили свыше 1500 маркетологов. Вы можете экономить как минимум 40% вашего бюджета, при этом получая больше заявок и мы знаем как это реализовать, узнайте подробности о нашем предложении для вас.</h2>
+                    <div class="btn_gr mid">
+                        <a href="">Узнать подробности</a>
+                    </div>
+                    <a href="" class="back">НАЗАД</a>
+                </section>    
             </div>
-            <p class="kr_op">Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec">
-                <h2>Мы знаем что вы размещали объявление в Яндекс.Директ.<br>На сколько вы довольны результатом?</h2>
-                <div class="btn_gr">
-                    <a href="">Доволен на 100%</a>
-                    <a href="">Могло быть и лучше</a>
-                    <a href="">Не доволен, слил бюджет</a>
-                    <a href="">Яндекс.Директ не работает</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
             <footer>
                 <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
             </footer>
         </div>
     </section>
 
-    <!-- Ответ - 1 -->
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o1">
-                <h2>Мы очень рады за Вас, тем не менее, хотите ли вы<br> улучшить показатели?</h2>
-                <div class="btn_gr mid">
-                    <a href="">Нет, меня все устравиает</a>
-                    <a href="">Безусловно</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o1_o2">
-                <h2>Хорошо, тогда ознакомьтесь с нашим<br> предложением, возможно оно вас заинтересует.</h2>
-                <div class="btn_gr mid">
-                    <a href="">скчать, ссылка на сайт</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o1_o1">
-                <h2>В данный момент реклама запущена?</h2>
-                <div class="btn_gr">
-                    <a href="">Да</a>
-                    <a href="">Нет</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o1_o1_o1">
-                <h2>Какой в среднем бюджет вы тратите в месяц?</h2>
-                <div class="btn_gr">
-                    <a href="">До 100 тыс. руб.</a>
-                    <a href="">От 100 до 300 тыс. руб.</a>
-                    <a href="">От 300 тыс. до 1 млн. руб.</a>
-                    <a href="">От 1 млн. руб.</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o1_o1_o2">
-                <h2>Какой в среднем бюджет вы тратили в месяц?</h2>
-                <div class="btn_gr">
-                    <a href="">До 100 тыс. руб.</a>
-                    <a href="">От 100 до 300 тыс. руб.</a>
-                    <a href="">От 300 тыс. до 1 млн. руб.</a>
-                    <a href="">От 1 млн. руб.</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o1_o1_o12_o">
-                <h2>95% рекламодателей допускают десятки ошибок в Яндекс Директ, мы знаем это, так как только за последние 2 года обучили свыше 1500 маркетологов. Вы можете экономить как минимум 40% вашего бюджета, при этом получая больше заявок и мы знаем как это реализовать, узнайте подробности о нашем предложении для вас.</h2>
-                <div class="btn_gr mid">
-                    <a href="">Узнать подробности</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <!-- Ответ - 2 -->
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o2">
-                <h2>Что конкретно вас не устраивает?</h2>
-                <div class="btn_gr">
-                    <a href="">Мало заявок</a>
-                    <a href="">Заявки не целевые</a>
-                    <a href="">Дорогие заявки</a>
-                    <a href="">Медленные директологи</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o2_o1">
-                <h2>В данный момент реклама запущена?</h2>
-                <div class="btn_gr">
-                    <a href="">Да</a>
-                    <a href="">Нет</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o2_o1_o1">
-                <h2>Какой в среднем бюджет вы тратите в месяц?</h2>
-                <div class="btn_gr">
-                    <a href="">До 100 тыс. руб.</a>
-                    <a href="">От 100 до 300 тыс. руб.</a>
-                    <a href="">От 300 тыс. до 1 млн. руб.</a>
-                    <a href="">От 1 млн. руб.</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o2_o2_o1">
-                <h2>Какой в среднем бюджет вы тратили в месяц?</h2>
-                <div class="btn_gr">
-                    <a href="">До 100 тыс. руб.</a>
-                    <a href="">От 100 до 300 тыс. руб.</a>
-                    <a href="">От 300 тыс. до 1 млн. руб.</a>
-                    <a href="">От 1 млн. руб.</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o2_o12_o">
-                <h2>95% рекламодателей допускают десятки ошибок в Яндекс Директ, мы знаем это, так как только за последние 2 года обучили свыше 1500 маркетологов. Вы можете экономить как минимум 40% вашего бюджета, при этом получая больше заявок и мы знаем как это реализовать, узнайте подробности о нашем предложении для вас.</h2>
-                <div class="btn_gr mid">
-                    <a href="">Узнать подробности</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <!-- Ответ - 3 -->
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o3">
-                <h2>Что конкретно вас не устраивает?</h2>
-                <div class="btn_gr">
-                    <a href="">Мало заявок</a>
-                    <a href="">Заявки не целевые</a>
-                    <a href="">Дорогие заявки</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o3_o1">
-                <h2>В данный момент реклама запущена?</h2>
-                <div class="btn_gr">
-                    <a href="">Да</a>
-                    <a href="">Нет</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o3_o1_o1">
-                <h2>Какой в среднем бюджет вы тратите в месяц?</h2>
-                <div class="btn_gr">
-                    <a href="">До 100 тыс. руб.</a>
-                    <a href="">От 100 до 300 тыс. руб.</a>
-                    <a href="">От 300 тыс. до 1 млн. руб.</a>
-                    <a href="">От 1 млн. руб.</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o3_o2_o1">
-                <h2>Какой в среднем бюджет вы тратили в месяц?</h2>
-                <div class="btn_gr">
-                    <a href="">До 100 тыс. руб.</a>
-                    <a href="">От 100 до 300 тыс. руб.</a>
-                    <a href="">От 300 тыс. до 1 млн. руб.</a>
-                    <a href="">От 1 млн. руб.</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o3_o12_o">
-                <h2>95% рекламодателей допускают десятки ошибок в Яндекс Директ, мы знаем это, так как только за последние 2 года обучили свыше 1500 маркетологов. Вы можете экономить как минимум 40% вашего бюджета, при этом получая больше заявок и мы знаем как это реализовать, узнайте подробности о нашем предложении для вас.</h2>
-                <div class="btn_gr mid">
-                    <a href="">Узнать подробности</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-
-    <!-- Ответ - 4 -->
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o4">
-                <h2>Сколько денег вы потратили в молоко?</h2>
-                <div class="btn_gr">
-                    <a href="">До 100 тыс. руб.</a>
-                    <a href="">От 100 до 300 тыс. руб.</a>
-                    <a href="">От 300 тыс. до 1 млн. руб.</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o4_o1">
-                <h2>К сожалению не всем везет с подрядчиками, зачастую попадаются исполнители, которые не обладают достаточным объемом знаний, готовы ли вы поработать и исполнителем, который делает реальный результат?</h2>
-                <div class="btn_gr mid">
-                    <a href="">Можно попробовать</a>
-                    <a href="">Никому не доверяю</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o4_o1_o2">
-                <h2>Хорошо, тогда ознакомьтесь с нашим предложением, возможно оно вас заинтересует</h2>
-                <div class="btn_gr mid">
-                    <a href="">Скчать</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
-
-    <section class="block">
-        <div class="wrap">
-            <header>
-                <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span>1 шаг из 8</span></p>
-            </header>
-            <section class="sec" id="o4_o1_o1">
-                <h2>95% рекламодателей допускают десятки ошибок в Яндекс Директ, мы знаем это, так как только за последние 2 года обучили свыше 1500 маркетологов. Вы можете экономить как минимум 40% вашего бюджета, при этом получая больше заявок и мы знаем как это реализовать, узнайте подробности о нашем предложении для вас.</h2>
-                <div class="btn_gr mid">
-                    <a href="">Узнать подробности</a>
-                </div>
-                <a href="" class="back">НАЗАД</a>
-            </section>
-            <footer>
-                <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
-            </footer>
-        </div>
-    </section>
 
     <!-- Факты -->
 
-    <section class="block">
+    <!--section class="block">
         <div class="wrap">
             <header>
                 <div class="logo"></div>
@@ -596,11 +285,11 @@
                 <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
             </footer>
         </div>
-    </section>
+    </section-->
 
     <!-- Этапы -->
 
-    <section class="block">
+    <!--section class="block">
         <div class="wrap">
             <header>
                 <div class="logo"></div>
@@ -726,11 +415,11 @@
                 <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
             </footer>
         </div>
-    </section>
+    </section-->
 
     <!-- Последний вопрос -->
 
-    <section class="block">
+    <!--section class="block">
         <div class="wrap">
             <header>
                 <div class="logo"></div>
@@ -754,12 +443,12 @@
                 <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
             </footer>
         </div>
-    </section>
+    </section-->
 
 
     <!-- Ответ 1 -->
 
-    <section class="block">
+    <!--section class="block">
         <div class="wrap">
             <header>
                 <div class="logo"></div>
@@ -774,11 +463,11 @@
                 <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
             </footer>
         </div>
-    </section>
+    </section-->
 
     <!-- Ответ 2 -->
 
-    <section class="block">
+    <!--section class="block">
         <div class="wrap">
             <header>
                 <div class="logo"></div>
@@ -817,8 +506,9 @@
                 <p>Краткий опрос в сфере аналитики Яндекс.Директ.</p>
             </footer>
         </div>
-    </section>
-
+    </section-->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
