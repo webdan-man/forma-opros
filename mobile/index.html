@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Opros</title>
-    <script type="text/javascript">if (screen.width <= 699) {document.location = "mobile/"+document.location.search;}</script>
+    <script type="text/javascript">if (screen.width > 699) {document.location = "../"+document.location.search;}</script>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/a_style.css">
+    <link rel="stylesheet" href="css/a_style_old.css">
+    <meta id="viewport" name="viewport" content="width=414">
 </head>
 
 <body>
@@ -14,8 +16,6 @@
         <div class="wrap">
             <header>
                 <div class="logo"></div>
-                <p class="opros">Краткий опрос
-                    <br><span><span id="step-data">1</span> шаг из 8</span></p>
             </header>
             <div id="opros-wrap" data-step="1">
                 <section class="sec active" data-step="1">
