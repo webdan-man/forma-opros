@@ -28,9 +28,10 @@ $headers.= "X-Mailer: PHP/" . phpversion()."\r\n";
 $headers.= "MIME-Version: 1.0" . "\r\n";
 $headers.= "Content-type: text/plain; charset=utf-8\r\n";
 
-$to = "triowork2@gmail.com";
+$to = "gulfstream-marketing@list.ru";
 
-$message = "Имя: $name\n";
+$message = "Отправлено с мобильной версии\n\n";
+$message .= "Имя: $name\n";
 $message .= "Телефон: $phone\n\n";
 $message .= "Шаг 1: $step1\n";
 $message .= "Шаг 2: $step2\n";
