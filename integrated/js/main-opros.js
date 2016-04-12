@@ -186,6 +186,7 @@ $('form').submit(function(e){
         success : function(){
         	$('.fins[data-fins="2"]').removeClass('active');
             $('.okgo').addClass('active');
+            yaCounter36735595.reachGoal('subm_2');
         }
     }); 
     }
