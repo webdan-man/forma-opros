@@ -28,9 +28,10 @@ $headers.= "X-Mailer: PHP/" . phpversion()."\r\n";
 $headers.= "MIME-Version: 1.0" . "\r\n";
 $headers.= "Content-type: text/plain; charset=utf-8\r\n";
 
-$to = "triowork2@gmail.com";
+$to = "gulfstream-marketing@list.ru, baocd.-.gulfstream.bz@lptracker.ru";
 
-$message = "Имя: $name\n";
+$message = "Отправлено с сайта\n\n";
+$message .= "Имя: $name\n";
 $message .= "Телефон: $phone\n\n";
 $message .= "Шаг 1: $step1\n";
 $message .= "Шаг 2: $step2\n";
@@ -50,6 +51,7 @@ $message .= "Тип соответствия ключа(e-точное/p-фра�
 $message .= "Гео-положение отправителя: $location\n\n";
 $message .= "Ссылка на сайт: $url\n";
 $message .= "Заголовок: $title\n";
+$message .= "<p>ip: {$_COOKIE["ip"]}</p>";
 
 mail ($to,$subject,$message,$headers);
 ?>

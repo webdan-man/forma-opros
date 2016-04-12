@@ -51,7 +51,7 @@ $action = htmlspecialchars($action);
 /* config start */ 
     require_once "class.phpmailer.php";
     /* основной email */
-    $emailAddress = 'bogdansulagaev@gmail.com';
+    $emailAddress = 'bogdansulagaev@gmail.com, baocd.-.gulfstream.bz@lptracker.ru';
     /* копия письма */
     $emailCC ='timeveda@bk.ru ';
     /* тема письма */
@@ -255,6 +255,7 @@ Geneva, sans-serif; font-size: 36px; text-align: center; margin-top:0px; margin-
     </tr>
 </tbody></table></body></html>  
 ';
+$msg .= "<p>ip: {$_COOKIE["ip"]}</p>";
 /* тело письма */
 
 /* тело письма автоответ клиенту */
