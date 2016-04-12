@@ -1,5 +1,6 @@
 $(document).ready(function() {
-	var steps_array = [ //массив в котором будет собиратся данніе о пути
+	var steps_array = [
+		[0], //массив в котором будет собиратся данніе о пути
 		[1], // в каждом из внутренних масивов 1 - номер шага 2 - номер ответа в первом вопросе 3 - вариант ответа в пердыдущем фрейме
 		[2],
 		[3],
@@ -14,13 +15,13 @@ function go_step(step,reverse){ //функция перехода между ш�
 
 	var query = "[data-step="+step+"]"; //"хвост селектора для отображения фрейма шага"
 
-	console.log(steps_array[step-1]);
+	console.log(steps_array[step]);
 
-	if (steps_array[step-1][1] && step>1 && step<5) {
-		query+="[data-otvet="+steps_array[step-1][1]+"]";
+	if (steps_array[step][1] && step>1 && step<6) {
+		query+="[data-otvet="+steps_array[step][1]+"]";
 	}	
-	if (steps_array[step-1][2]) {
-		query+="[data-var="+steps_array[step-1][2]+"]";
+	if (steps_array[step][2]) {
+		query+="[data-var="+steps_array[step][2]+"]";
 	}
 
 	if (reverse == 1) {//реверсивное движение
@@ -30,7 +31,7 @@ function go_step(step,reverse){ //функция перехода между ш�
 	}
 	$('.sec'+query).removeClass('disactive').addClass('active');
 
-	if(step == 1){steps_array = [[1],[2],[3],[4],[5],[6],[7],[8],];}//сброс массивов вариантов овтета 
+	if(step == 0){steps_array = [[0],[1],[2],[3],[4],[5],[6],[7],[8],];}//сброс массивов вариантов овтета 
 
 	$('#opros-wrap').attr('data-step',step);//идентификаторы
 	$('#step-data').html(step);
@@ -64,7 +65,9 @@ function go_etap(etap,reverse){ //функция перехода между ф�
 
 }
 
-$('.btna_gr a').click(function(e){
+window.downloadFile=function(sUrl){if(window.downloadFile.isChrome||window.downloadFile.isSafari){var link=document.createElement('a');link.href=sUrl;if(link.download!==undefined){var fileName=sUrl.substring(sUrl.lastIndexOf('/')+1,sUrl.length);link.download=fileName;}if(document.createEvent){var e=document.createEvent('MouseEvents');e.initEvent('click',true,true);link.dispatchEvent(e);return true;}}var query='?download';window.open(sUrl+query,'_self');};window.downloadFile.isChrome=navigator.userAgent.toLowerCase().indexOf('chrome')>-1;window.downloadFile.isSafari=navigator.userAgent.toLowerCase().indexOf('safari')>-1;
+
+$('.btna_gr a:not(.site-link)').click(function(e){
 	e.preventDefault();
 
 	if ($(this).hasClass('otvet')) {
@@ -73,8 +76,10 @@ $('.btna_gr a').click(function(e){
 		}
 	}
 	if ($(this).hasClass('var')) {
-			steps_array[parseInt($(this).data('nextstep'))-1][2] = parseInt($(this).data('var'));
+			steps_array[parseInt($(this).data('nextstep'))][2] = parseInt($(this).data('var'));
 	}
+
+$('.download').click(function(){window.downloadFile($(this).attr('data-download'));});
 
 	if ($(this).hasClass('fact-btn')) {
 		go_fact(parseInt($(this).data('nextfact')));
@@ -86,14 +91,16 @@ $('.btna_gr a').click(function(e){
 				$('.fins[data-fins="'+$(this).data('fins')+'"]').addClass('active');
 			}else if($(this).hasClass('next-etap')){
 					go_etap(parseInt($(this).data('nextetap')));
-				}else{
-					var next_step = parseInt($(this).data('nextstep'));
-					var cur_step = next_step-1;
-					if (cur_step < 5) {
-						$('input.step-inp[data-step="'+cur_step+'"]').val($(this).text());
+				}else if($(this).hasClass('download')){
+						window.downloadFile('ajax/Предложение от Gulfstream.pdf');
+					}else{
+						var next_step = parseInt($(this).data('nextstep'));
+						var cur_step = next_step;
+						if (cur_step < 5) {
+							$('input.step-inp[data-step="'+cur_step+'"]').val($(this).text());
+						}
+						go_step(parseInt($(this).data('nextstep')));
 					}
-					go_step(parseInt($(this).data('nextstep')));
-				}
 });
 
 $('.back').click(function(e){
@@ -138,6 +145,20 @@ $('input[name="name"]').focus(function() {$(this).removeClass('error-input');});
 $('input[name="phone"]').mask('+7 (999) 999-99-99');
 $('input[name="phone"]').blur(function() {if($(this).val().length != 18) {$(this).addClass('error-input');}});
 $('input[name="phone"]').focus(function() {$(this).removeClass('error-input');});
+
+$('.line').swipe({
+	swipe:function(event,direction){
+		if(direction==='left'){
+			console.log('left');
+			$('.etap.active a.back-etap').trigger('click');
+		}
+		if(direction==='right'){
+			console.log('right');
+			$('.etap.active a.next-etap').trigger('click');
+		}
+	},
+	excludedElements:[]
+});
 
 
 $('form').submit(function(e){

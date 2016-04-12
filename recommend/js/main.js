@@ -78,8 +78,6 @@ $('.btn_gr a:not(.site-link)').click(function(e){
 			steps_array[parseInt($(this).data('nextstep'))-1][2] = parseInt($(this).data('var'));
 	}
 
-$('.download').click(function(){window.downloadFile($(this).attr('data-download'));});
-
 	if ($(this).hasClass('fact-btn')) {
 		go_fact(parseInt($(this).data('nextfact')));
 	}else if($(this).hasClass('show-etap')){

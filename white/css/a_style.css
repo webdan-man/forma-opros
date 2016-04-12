@@ -51,7 +51,7 @@ a{text-decoration:none;color:inherit;outline:0!important}
     left: 0;
 }
 
-.block {
+.block-new {
     /* background: url(../img/bg_bg.png)no-repeat bottom -368px right -261px #1b1b1b; */
     position: relative;
     width: 100%;
@@ -174,12 +174,16 @@ a{text-decoration:none;color:inherit;outline:0!important}
 }
 .sec {
     background: white;
-    min-height: 250px;
+    min-height: 320px;
     position: relative;
     /* -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1); */
     -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 1);
     /* box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 1); */
+    position: absolute;
     padding: 20px 33px;
+    border-radius: 10px;
+    transform: translateX(100%);
+    transition: all 0.35s;
 }
 .block .sec_n {
     position: absolute;
@@ -466,9 +470,6 @@ form {
     text-align: center;
 }
 form input {
-    background: #fff url(../img/input.png)no-repeat center;
-    width: 255px;
-    height: 81px;
     transition: all 0.25s;
     outline: none;
     border: none;
@@ -479,19 +480,24 @@ form input {
     color:black;
     text-align: center;
     padding: 0px 15px;
+    background-color: #fff;
+    color: #b0b0b0;
+    width: 230px;
+    padding-left: 15px;
+    height: 65px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 300;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,.2);
 }
 .error-input{
     background: #FFD6D6 url(../img/input.png)no-repeat center;
 }
 form button{
     border: 5px solid #00abff;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
-    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.5);
-    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.5);
     display: inline-block;
     width: 248px;
     height: 73px;
-    margin: 4px;
     word-spacing: 0px;
     color: black;
     font-size: 18px;
@@ -500,16 +506,25 @@ form button{
     letter-spacing: -0.3px;
     box-sizing: border-box;
     vertical-align: top;
-    background: white;
-    transition: color 0.25s, background 0.25s;
+    transition: all 0.25s;
+    background-color: white;
+    width: 270px;
+    height: 65px;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    background: #fcd75e;
+    background: -webkit-linear-gradient(#fce85e,#fcd75e);
+    background: linear-gradient(#fce85e,#fcd75e);
+    color: #121212;
 }
 form button:hover{
-    background: url(../img/bg_btn.png)no-repeat top center;
-    background-size: cover;
-    color: white;
-    border: none;
-    line-height: 76px;
-
+    /* background: url(../img/bg_btn.png)no-repeat top center; */
+    /* background-size: cover; */
+    /* color: white; */
+    /* border: none; */
+    /* line-height: 76px; */
+    box-shadow: 0 0 4px 1px rgba(0,0,0,.3);
 }
 ::-webkit-input-placeholder {
     font-size:19px;
@@ -602,7 +617,8 @@ form button:hover{
     padding: 5px;
 }
 .re.do{
-    line-height: 20px!important;
+    line-height: 21px!important;
+    padding-top: 0;
 }
 .bak {
     background: url(../img/back.png)no-repeat left;
@@ -666,7 +682,7 @@ form button:hover{
     height: 400px;
     z-index: -1;
     opacity: 0;
-    padding-top: 140px;
+    padding-top: 120px;
     left: 0;
     transition: all 0.35s ease-in-out;
     transform: translateY(100%);
@@ -690,4 +706,29 @@ form button:hover{
     overflow: hidden;
     padding-top: 0px;
     /* margin-top: 40px; */
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+.sec[data-step="5"] h2{
+    margin-top: 0;
+}
+.sec[data-step="5"] .btna_gr{
+    margin-top: 10px;
+}
+.site-link-btn{
+    width: 200px!important;
+    height: 40px!important;
+    line-height: 30px!important;
+    margin-bottom: 20px!important;
+}
+.etap[data-etap="1"] .btna_gr{
+    margin-top: 0;
+}
+.fins[data-fins="0"] .btna_gr{
+    margin-top: 10px;
+}
+#fix-opros-owerflow{
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.5);
+    border-radius: 10px;
 }
