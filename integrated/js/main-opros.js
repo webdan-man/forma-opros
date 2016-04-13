@@ -192,4 +192,12 @@ $('form').submit(function(e){
     }
 });
 
+//кнопка брифа на сайте
+$('.brif').click(function(e) {
+    e.preventDefault();
+	window.downloadFile('ajax/Договор GULFSTREAM marketing.doc');
+});
+
+
+
 });
