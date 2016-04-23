@@ -51,7 +51,9 @@ $action = htmlspecialchars($action);
 /* config start */ 
     require_once "class.phpmailer.php";
     /* основной email */
-    $emailAddress = 'bogdansulagaev@gmail.com, baocd.-.gulfstream.bz@lptracker.ru';
+    $emailAddress = 'baocd.-.gulfstream.bz@lptracker.ru';
+    $emailAddress1 = 'gulfstream-marketing@list.ru';
+    $emailAddress2 = 'bogdansulagaev@gmail.com';
     /* копия письма */
     $emailCC ='timeveda@bk.ru ';
     /* тема письма */
@@ -273,7 +275,8 @@ $mail = new PHPMailer();
 $mail->IsMail();
 $mail->AddReplyTo($email,$email);
 $mail->AddAddress($emailAddress);
-$mail->AddCC($emailCC);
+$mail->AddCC($emailAddress1);
+$mail->AddCC($emailAddress2);
 $mail->SetFrom($email,$email);
 $mail->Subject = $subject." |  от ".$email;
 if(isset($_FILES['files'])) {

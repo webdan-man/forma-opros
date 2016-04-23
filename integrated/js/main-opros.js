@@ -175,7 +175,7 @@ $('.line').swipe({
 });
 
 
-$('form').submit(function(e){
+$('#opros-wrap form').submit(function(e){
     e.preventDefault();
     $(this).find('input[type="text"]').trigger('blur');
     if(!$(this).find('input[type="text"]').hasClass('error-input')){
