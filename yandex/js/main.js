@@ -107,7 +107,7 @@ $('.btn_gr a:not(.site-link)').click(function(e){
 							go_start(parseInt($(this).data('nextstart')));
 						}else {
 								var next_step = parseInt($(this).data('nextstep'));
-								var cur_step = next_step;
+								var cur_step = next_step-1;
 								if (cur_step < 5) {
 									$('input.step-inp[data-step="'+cur_step+'"]').val($(this).text());
 								}

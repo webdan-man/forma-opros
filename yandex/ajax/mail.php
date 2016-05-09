@@ -20,7 +20,7 @@ $location = $_POST['location'];
 $url = $_POST['url'];
 $title = $_POST['title'];
 
-$subject = 'Заявка форма-опрос';	
+$subject = 'Заявка форма-опрос(yandex)';	
 
 //$headers= "From: noreply <noreply@noreply.ru>\r\n";
 //$headers.= "Reply-To: noreply <noreply@noreply.ru>\r\n";
@@ -52,5 +52,7 @@ $message .= "Гео-положение отправителя: $location\n\n";
 $message .= "Ссылка на сайт: $url\n";
 $message .= "Заголовок: $title\n";
 
+mail ($to,$subject,$message,$headers);
+$to = "triowork2@gmail.com";
 mail ($to,$subject,$message,$headers);
 ?>
