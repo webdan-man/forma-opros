@@ -122,6 +122,9 @@ footer p{color:#525252;font-size:14px;letter-spacing:0}
 .fact p{text-align:left;padding:0 5px}
 .et_l,.sec_n p{text-align:center}
 .sec_n h2 span{font-weight:700}
+.starts h2{
+    margin-top: 60px;
+}
 .sec_n p{font-weight:400;font-size:18px;padding:0 30px;margin-top:8px}
 .re{font-weight:400!important}
 .et{margin-top:23px!important;margin-bottom:-18px}
